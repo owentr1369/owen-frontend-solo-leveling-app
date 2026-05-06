@@ -84,40 +84,6 @@ export function getSkillTier(level: number): { label: string; color: string } {
   return { label: 'Common', color: '#95A5A6' };
 }
 
-export const DEFAULT_SKILLS: Skill[] = [
-  // Frontend
-  { id: 'html', name: 'HTML', category: 'Frontend', level: 70, description: 'Semantic markup & structure' },
-  { id: 'css', name: 'CSS', category: 'Frontend', level: 65, description: 'Styling & layout systems' },
-  { id: 'javascript', name: 'JavaScript', category: 'Frontend', level: 60, description: 'Core language fundamentals' },
-  { id: 'typescript', name: 'TypeScript', category: 'Frontend', level: 50, description: 'Static typing & interfaces' },
-  { id: 'react', name: 'React', category: 'Frontend', level: 55, description: 'Component-based UI library' },
-  { id: 'nextjs', name: 'Next.js', category: 'Frontend', level: 45, description: 'Full-stack React framework' },
-  { id: 'performance', name: 'Performance Optimization', category: 'Frontend', level: 35, description: 'Core Web Vitals & optimization' },
-  { id: 'accessibility', name: 'Accessibility', category: 'Frontend', level: 30, description: 'WCAG & inclusive design' },
-  { id: 'testing', name: 'Testing', category: 'Frontend', level: 25, description: 'Unit, integration & e2e testing' },
-  // Backend
-  { id: 'nodejs', name: 'Node.js', category: 'Backend', level: 30, description: 'Server-side JavaScript' },
-  { id: 'apis', name: 'APIs', category: 'Backend', level: 40, description: 'REST & GraphQL API design' },
-  { id: 'databases', name: 'Databases', category: 'Backend', level: 25, description: 'SQL, NoSQL, data modeling' },
-  { id: 'auth', name: 'Authentication', category: 'Backend', level: 30, description: 'OAuth, JWT, security patterns' },
-  { id: 'system-design', name: 'System Design', category: 'Backend', level: 20, description: 'Scalable architecture patterns' },
-  // Soft Skills
-  { id: 'communication', name: 'Communication', category: 'Soft Skills', level: 55, description: 'Clear & effective communication' },
-  { id: 'leadership', name: 'Leadership', category: 'Soft Skills', level: 30, description: 'Guiding & inspiring teams' },
-  { id: 'project-mgmt', name: 'Project Management', category: 'Soft Skills', level: 35, description: 'Planning & execution' },
-  { id: 'problem-solving', name: 'Problem Solving', category: 'Soft Skills', level: 60, description: 'Analytical thinking & solutions' },
-  { id: 'mentoring', name: 'Mentoring', category: 'Soft Skills', level: 25, description: 'Growing other engineers' },
-  { id: 'negotiation', name: 'Negotiation', category: 'Soft Skills', level: 20, description: 'Achieving win-win outcomes' },
-  { id: 'product-thinking', name: 'Product Thinking', category: 'Soft Skills', level: 35, description: 'User & business alignment' },
-  { id: 'strategic-thinking', name: 'Strategic Thinking', category: 'Soft Skills', level: 20, description: 'Long-term vision & planning' },
-  { id: 'english', name: 'English', category: 'Soft Skills', level: 72, description: 'IELTS 6.5 — Competent user (B2+). Professional working proficiency.' },
-  // Business & Leadership
-  { id: 'hiring', name: 'Hiring', category: 'Business & Leadership', level: 15, description: 'Talent acquisition & evaluation' },
-  { id: 'team-building', name: 'Team Building', category: 'Business & Leadership', level: 20, description: 'Building high-performance teams' },
-  { id: 'tech-vision', name: 'Technical Vision', category: 'Business & Leadership', level: 25, description: 'Technology strategy & roadmap' },
-  { id: 'stakeholder', name: 'Stakeholder Management', category: 'Business & Leadership', level: 20, description: 'Executive & cross-functional alignment' },
-  { id: 'architecture', name: 'Architecture Decisions', category: 'Business & Leadership', level: 20, description: 'System architecture & trade-offs' },
-];
 
 export interface DailyTask {
   id: string;
@@ -172,16 +138,6 @@ export interface ProfileData {
   goals: string[];
 }
 
-export const DEFAULT_PROFILE: ProfileData = {
-  name: 'Owen Developer',
-  title: 'Frontend Developer → CTO',
-  bio: 'On a legendary journey to become a world-class CTO. Building, learning, and leveling up every single day.',
-  mainStack: ['React', 'TypeScript', 'Next.js', 'Node.js'],
-  currentFocus: 'Mastering system design and technical leadership',
-  strengths: ['Fast learner', 'Problem solver', 'Detail-oriented'],
-  weaknesses: ['Public speaking', 'Delegation', 'Work-life balance'],
-  goals: ['Lead a team of 10+ engineers', 'Build a product used by 1M+ users', 'Become CTO by 2027'],
-};
 
 export interface AppState {
   totalXP: number;
