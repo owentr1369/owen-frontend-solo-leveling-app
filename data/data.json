@@ -40,6 +40,7 @@
     { "id": "negotiation", "name": "Negotiation", "category": "Soft Skills", "level": 25, "description": "Achieving win-win outcomes" },
     { "id": "product-thinking", "name": "Product Thinking", "category": "Soft Skills", "level": 40, "description": "User & business alignment" },
     { "id": "strategic-thinking", "name": "Strategic Thinking", "category": "Soft Skills", "level": 22, "description": "Long-term vision & planning" },
+    { "id": "english", "name": "English", "category": "Soft Skills", "level": 72, "description": "IELTS 6.5 — Competent user (B2+). Professional working proficiency." },
     { "id": "hiring", "name": "Hiring", "category": "Business & Leadership", "level": 10, "description": "Talent acquisition & evaluation" },
     { "id": "team-building", "name": "Team Building", "category": "Business & Leadership", "level": 18, "description": "Building high-performance teams" },
     { "id": "tech-vision", "name": "Technical Vision", "category": "Business & Leadership", "level": 28, "description": "Technology strategy & roadmap" },

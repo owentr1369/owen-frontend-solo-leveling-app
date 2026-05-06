@@ -110,6 +110,7 @@ export const DEFAULT_SKILLS: Skill[] = [
   { id: 'negotiation', name: 'Negotiation', category: 'Soft Skills', level: 20, description: 'Achieving win-win outcomes' },
   { id: 'product-thinking', name: 'Product Thinking', category: 'Soft Skills', level: 35, description: 'User & business alignment' },
   { id: 'strategic-thinking', name: 'Strategic Thinking', category: 'Soft Skills', level: 20, description: 'Long-term vision & planning' },
+  { id: 'english', name: 'English', category: 'Soft Skills', level: 72, description: 'IELTS 6.5 — Competent user (B2+). Professional working proficiency.' },
   // Business & Leadership
   { id: 'hiring', name: 'Hiring', category: 'Business & Leadership', level: 15, description: 'Talent acquisition & evaluation' },
   { id: 'team-building', name: 'Team Building', category: 'Business & Leadership', level: 20, description: 'Building high-performance teams' },

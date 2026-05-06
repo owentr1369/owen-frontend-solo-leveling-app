@@ -26,8 +26,18 @@ function AppContent() {
   const [activeSection, setActiveSection] = useState<Section>('dashboard');
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
   const [newAchievement, setNewAchievement] = useState<Achievement | null>(null);
+  // Track whether we're on desktop to decide if sidebar margin applies
+  const [isDesktop, setIsDesktop] = useState(false);
   const { state } = useApp();
   const prevAchievements = useRef(state.achievements);
+
+  // Detect desktop vs mobile — runs only on client
+  useEffect(() => {
+    const check = () => setIsDesktop(window.innerWidth >= 768);
+    check();
+    window.addEventListener('resize', check);
+    return () => window.removeEventListener('resize', check);
+  }, []);
 
   // Check for newly unlocked achievements
   useEffect(() => {
@@ -41,12 +51,14 @@ function AppContent() {
 
   const SectionComponent = SECTION_COMPONENTS[activeSection];
   const sidebarWidth = sidebarCollapsed ? 72 : 260;
+  // Only offset content by sidebar width on desktop
+  const contentMargin = isDesktop ? sidebarWidth : 0;
 
   return (
     <div className="min-h-screen relative" style={{ background: '#070B14' }}>
       <ParticleBackground count={25} />
 
-      {/* Sidebar */}
+      {/* Sidebar — hidden on mobile via its own className */}
       <Sidebar
         activeSection={activeSection}
         onNavigate={id => setActiveSection(id as Section)}
@@ -56,13 +68,11 @@ function AppContent() {
 
       {/* Main content */}
       <motion.main
-        animate={{ marginLeft: `${sidebarWidth}px` }}
+        animate={{ marginLeft: contentMargin }}
         transition={{ duration: 0.3, ease: 'easeInOut' }}
         className="relative z-10 min-h-screen pb-24 md:pb-8"
         style={{ marginLeft: 0 }}
       >
-        <div className="md:hidden" /> {/* Mobile spacer */}
-        
         <div className="max-w-5xl mx-auto px-4 md:px-6 py-6 md:py-8">
           <AnimatePresence mode="wait">
             <motion.div
@@ -78,7 +88,7 @@ function AppContent() {
         </div>
       </motion.main>
 
-      {/* Mobile nav */}
+      {/* Mobile bottom nav */}
       <MobileNav
         activeSection={activeSection}
         onNavigate={id => setActiveSection(id as Section)}
