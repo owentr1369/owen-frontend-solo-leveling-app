@@ -1,0 +1,62 @@
+{
+  "totalXP": 125000,
+  "streak": 12,
+  "lastActiveDate": "2026-05-06",
+  "profile": {
+    "name": "Owen Tran",
+    "title": "Mid-Level Frontend Engineer → CTO",
+    "bio": "Grinding daily to master the craft. Building with React & TypeScript, leveling up system design, and slowly shifting from coder to leader.",
+    "mainStack": ["React", "TypeScript", "Next.js", "CSS", "Node.js"],
+    "currentFocus": "Performance optimization, TypeScript mastery, and system design fundamentals",
+    "strengths": ["Strong React fundamentals", "Fast learner", "Attention to detail", "Clean code mindset"],
+    "weaknesses": ["System design depth", "Delegation & leadership", "Public speaking", "Backend knowledge"],
+    "goals": [
+      "Reach Senior Frontend Engineer in 12 months",
+      "Lead a frontend team of 3–5 engineers",
+      "Build a side project with 10k+ users",
+      "Become CTO by 2030"
+    ]
+  },
+  "skills": [
+    { "id": "html", "name": "HTML", "category": "Frontend", "level": 85, "description": "Semantic markup & structure" },
+    { "id": "css", "name": "CSS", "category": "Frontend", "level": 80, "description": "Styling & layout systems" },
+    { "id": "javascript", "name": "JavaScript", "category": "Frontend", "level": 78, "description": "Core language fundamentals" },
+    { "id": "typescript", "name": "TypeScript", "category": "Frontend", "level": 65, "description": "Static typing & interfaces" },
+    { "id": "react", "name": "React", "category": "Frontend", "level": 75, "description": "Component-based UI library" },
+    { "id": "nextjs", "name": "Next.js", "category": "Frontend", "level": 62, "description": "Full-stack React framework" },
+    { "id": "performance", "name": "Performance Optimization", "category": "Frontend", "level": 48, "description": "Core Web Vitals & optimization" },
+    { "id": "accessibility", "name": "Accessibility", "category": "Frontend", "level": 42, "description": "WCAG & inclusive design" },
+    { "id": "testing", "name": "Testing", "category": "Frontend", "level": 45, "description": "Unit, integration & e2e testing" },
+    { "id": "nodejs", "name": "Node.js", "category": "Backend", "level": 38, "description": "Server-side JavaScript" },
+    { "id": "apis", "name": "APIs", "category": "Backend", "level": 52, "description": "REST & GraphQL API design" },
+    { "id": "databases", "name": "Databases", "category": "Backend", "level": 35, "description": "SQL, NoSQL, data modeling" },
+    { "id": "auth", "name": "Authentication", "category": "Backend", "level": 40, "description": "OAuth, JWT, security patterns" },
+    { "id": "system-design", "name": "System Design", "category": "Backend", "level": 28, "description": "Scalable architecture patterns" },
+    { "id": "communication", "name": "Communication", "category": "Soft Skills", "level": 65, "description": "Clear & effective communication" },
+    { "id": "leadership", "name": "Leadership", "category": "Soft Skills", "level": 35, "description": "Guiding & inspiring teams" },
+    { "id": "project-mgmt", "name": "Project Management", "category": "Soft Skills", "level": 42, "description": "Planning & execution" },
+    { "id": "problem-solving", "name": "Problem Solving", "category": "Soft Skills", "level": 72, "description": "Analytical thinking & solutions" },
+    { "id": "mentoring", "name": "Mentoring", "category": "Soft Skills", "level": 32, "description": "Growing other engineers" },
+    { "id": "negotiation", "name": "Negotiation", "category": "Soft Skills", "level": 25, "description": "Achieving win-win outcomes" },
+    { "id": "product-thinking", "name": "Product Thinking", "category": "Soft Skills", "level": 40, "description": "User & business alignment" },
+    { "id": "strategic-thinking", "name": "Strategic Thinking", "category": "Soft Skills", "level": 22, "description": "Long-term vision & planning" },
+    { "id": "hiring", "name": "Hiring", "category": "Business & Leadership", "level": 10, "description": "Talent acquisition & evaluation" },
+    { "id": "team-building", "name": "Team Building", "category": "Business & Leadership", "level": 18, "description": "Building high-performance teams" },
+    { "id": "tech-vision", "name": "Technical Vision", "category": "Business & Leadership", "level": 28, "description": "Technology strategy & roadmap" },
+    { "id": "stakeholder", "name": "Stakeholder Management", "category": "Business & Leadership", "level": 20, "description": "Executive & cross-functional alignment" },
+    { "id": "architecture", "name": "Architecture Decisions", "category": "Business & Leadership", "level": 30, "description": "System architecture & trade-offs" }
+  ],
+  "dailyLogs": [],
+  "achievements": [
+    { "id": "first-task", "title": "First Step", "description": "Complete your first task", "icon": "⚡", "unlocked": true, "unlockedAt": "2026-04-01T08:00:00.000Z" },
+    { "id": "level-10", "title": "Rookie No More", "description": "Reach level 10", "icon": "🔥", "unlocked": true, "unlockedAt": "2026-04-05T10:00:00.000Z" },
+    { "id": "level-25", "title": "Growing Fast", "description": "Reach level 25", "icon": "💎", "unlocked": true, "unlockedAt": "2026-04-15T09:00:00.000Z" },
+    { "id": "level-50", "title": "Halfway Legend", "description": "Reach level 50", "icon": "⚔️", "unlocked": true, "unlockedAt": "2026-05-01T11:00:00.000Z" },
+    { "id": "level-75", "title": "Elite Developer", "description": "Reach level 75", "icon": "👑", "unlocked": false },
+    { "id": "level-100", "title": "The CTO", "description": "Reach the maximum level", "icon": "🏆", "unlocked": false },
+    { "id": "streak-7", "title": "Week Warrior", "description": "Maintain a 7-day streak", "icon": "🌟", "unlocked": true, "unlockedAt": "2026-05-03T08:00:00.000Z" },
+    { "id": "streak-30", "title": "Month Master", "description": "Maintain a 30-day streak", "icon": "💫", "unlocked": false },
+    { "id": "skill-master", "title": "Skill Master", "description": "Get any skill to 90+", "icon": "🎯", "unlocked": false },
+    { "id": "xp-1000", "title": "XP Grinder", "description": "Earn 1000 total XP", "icon": "💥", "unlocked": true, "unlockedAt": "2026-04-10T12:00:00.000Z" }
+  ]
+}
