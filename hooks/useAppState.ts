@@ -3,17 +3,15 @@ import { useCallback } from 'react';
 import { useLocalStorage } from './useLocalStorage';
 import {
   AppState,
-  DEFAULT_SKILLS,
-  DEFAULT_PROFILE,
   ACHIEVEMENTS,
   getLevelFromXP,
   DailyTask,
   DailyLog,
-  Skill,
   ProfileData,
 } from '@/lib/types';
+import seedData from '@/data/data.json';
 
-const STORAGE_KEY = 'solo-leveling-state';
+const STORAGE_KEY = 'solo-leveling-state-v2';
 
 function getTodayStr() {
   return new Date().toISOString().split('T')[0];
@@ -38,14 +36,20 @@ function calcStreak(logs: DailyLog[]): number {
   return streak;
 }
 
+// Merge seed data with live achievement condition functions
 const defaultState: AppState = {
-  totalXP: 0,
-  skills: DEFAULT_SKILLS,
-  dailyLogs: [],
-  achievements: ACHIEVEMENTS,
-  profile: DEFAULT_PROFILE,
-  streak: 0,
-  lastActiveDate: '',
+  totalXP: seedData.totalXP,
+  streak: seedData.streak,
+  lastActiveDate: seedData.lastActiveDate,
+  profile: seedData.profile,
+  skills: seedData.skills as AppState['skills'],
+  dailyLogs: seedData.dailyLogs as AppState['dailyLogs'],
+  // Overlay unlocked/unlockedAt from seed onto ACHIEVEMENTS which carry the condition fns
+  achievements: ACHIEVEMENTS.map(a => {
+    const seeded = (seedData.achievements as Array<{ id: string; unlocked: boolean; unlockedAt?: string }>)
+      .find(s => s.id === a.id);
+    return seeded ? { ...a, unlocked: seeded.unlocked, unlockedAt: seeded.unlockedAt } : a;
+  }),
 };
 
 export function useAppState() {

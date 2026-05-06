@@ -443,7 +443,8 @@ export default function DailyProgressSection() {
           >
             Quick Add
           </div>
-          <div className="flex flex-wrap gap-2">
+          {/* Horizontal scroll row — no wrapping on mobile */}
+          <div className="flex gap-2 overflow-x-auto pb-2" style={{ scrollbarWidth: 'none' }}>
             {PRESET_TASKS.map((preset) => {
               const catConf = CATEGORY_CONFIG[preset.category];
               const Icon = catConf.icon;
@@ -451,7 +452,7 @@ export default function DailyProgressSection() {
                 <button
                   key={preset.title}
                   onClick={() => handlePreset(preset)}
-                  className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs transition-all hover:scale-105 active:scale-95"
+                  className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs transition-all hover:scale-105 active:scale-95 shrink-0 whitespace-nowrap"
                   style={{
                     background: `${catConf.color}15`,
                     border: `1px solid ${catConf.color}30`,
@@ -459,9 +460,7 @@ export default function DailyProgressSection() {
                   }}
                 >
                   <Icon size={11} />
-                  {preset.title.length > 28
-                    ? preset.title.slice(0, 28) + "…"
-                    : preset.title}
+                  {preset.title}
                 </button>
               );
             })}
